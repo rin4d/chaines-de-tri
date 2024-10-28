@@ -62,24 +62,10 @@ section {
     background-color: #fff;
     padding: 20px;
     margin: 20px 0; 
-    max-width: 1300px; 
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(122, 121, 121, 0.363);
-    border-radius: 15px; 
-    box-sizing: border-box; 
-}
-
-/* Style des sections */
-section {
-    display: flex;
-    flex-direction: column; 
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0; 
     max-width: 1500px; 
     width: 100%;
     box-shadow: 0 2px 4px rgba(122, 121, 121, 0.363);
-    border-radius: 15px; 
+    border-radius: 3px; 
     box-sizing: border-box; 
 }
 
@@ -144,9 +130,8 @@ tbody tr:nth-child(even) {
     <main>
 
         <h1>CHAÎNES : 824</h1>
-
         <section>
-            <table>
+            <table border="1">
                 <thead>
                     <tr>
                         <th>Numero</th>
@@ -158,6 +143,7 @@ tbody tr:nth-child(even) {
                         <th>Catégories</th>
                         <th>Media</th>
                         <th>Adulte</th>
+                        <th>En clair / crypté</th>
                         <th>Forcer diffusion</th>
                         <th>Forcer non-diffusion</th>
                         <th>A diffuser</th>
@@ -167,168 +153,81 @@ tbody tr:nth-child(even) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><b class="numero">1</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
+                        <td onclick="makeEditable(this)">1</td>
+                        <td onclick="makeEditable(this)">ID1234</td>
+                        <td onclick="makeEditable(this)">Nom1</td>
+                        <td onclick="makeEditable(this)">NomMumu1</td>
+                        <td class="pays" onclick="makeEditable(this)">France</td>
+                        <td onclick="makeEditable(this)">Français</td>
+                        <td onclick="makeEditable(this)">Cat1</td>
+                        <td onclick="makeEditable(this)">Media1</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Crypté</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">192.168.1.1</td>
+                        <td onclick="makeEditable(this)">5</td>
                     </tr>
+
                     <tr>
-                        <td><b class="numero">2</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
+                        <td onclick="makeEditable(this)">2</td>
+                        <td onclick="makeEditable(this)">ID1234</td>
+                        <td onclick="makeEditable(this)">Nom1</td>
+                        <td onclick="makeEditable(this)">NomMumu1</td>
+                        <td onclick="makeEditable(this)">France</td>
+                        <td onclick="makeEditable(this)">Français</td>
+                        <td onclick="makeEditable(this)">Cat1</td>
+                        <td onclick="makeEditable(this)">Media1</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Crypté</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">192.168.1.1</td>
+                        <td onclick="makeEditable(this)">5</td>
                     </tr>
+
                     <tr>
-                        <td><b class="numero">3</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
+                        <td onclick="makeEditable(this)">3</td>
+                        <td onclick="makeEditable(this)">ID1234</td>
+                        <td onclick="makeEditable(this)">Nom1</td>
+                        <td onclick="makeEditable(this)">NomMumu1</td>
+                        <td onclick="makeEditable(this)">France</td>
+                        <td onclick="makeEditable(this)">Français</td>
+                        <td onclick="makeEditable(this)">Cat1</td>
+                        <td onclick="makeEditable(this)">Media1</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Crypté</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">192.168.1.1</td>
+                        <td onclick="makeEditable(this)">5</td>
                     </tr>
+
                     <tr>
-                        <td><b class="numero">4</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td><b class="numero">5</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td><b class="numero">6</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td><b class="numero">7</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td><b class="numero">8</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td><b class="numero">9</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td><b class="numero">10</b></td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
+                        <td onclick="makeEditable(this)">4</td>
+                        <td onclick="makeEditable(this)">ID1234</td>
+                        <td onclick="makeEditable(this)">Nom1</td>
+                        <td onclick="makeEditable(this)">NomMumu1</td>
+                        <td onclick="makeEditable(this)">France</td>
+                        <td onclick="makeEditable(this)">Français</td>
+                        <td onclick="makeEditable(this)">Cat1</td>
+                        <td onclick="makeEditable(this)">Media1</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Crypté</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">Non</td>
+                        <td onclick="makeEditable(this)">Oui</td>
+                        <td onclick="makeEditable(this)">192.168.1.1</td>
+                        <td onclick="makeEditable(this)">5</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
