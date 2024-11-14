@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Chaînes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#"><b>Chaînes</b></a></li>
+            <li><a href="#"><b>Catégories</b></a></li>
+            <li><a href="#"><b>Pays</b></a></li>
+            <li><a href="#"><b>Langues</b></a></li>
+            <li><a href="#"><b>Occurences</b></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>CHAÎNES : 824</h1>
+    <section>
+        <table>
+            <thead>
+            <tr>
+                <th>Numero</th>
+                <th>ID Github</th>
+                <th>Nom</th>
+                <th>Nom Mumu</th>
+                <th>Pays</th>
+                <th>Langues</th>
+                <th>Catégories</th>
+                <th>Media</th>
+                <th>Adulte</th>
+                <th>En clair / crypté</th>
+                <th>Forcer diffusion</th>
+                <th>Forcer non-diffusion</th>
+                <th>A diffuser</th>
+                <th>IP</th>
+                <th>Occurences</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for chaine in chaines %}
+                <tr>
+                    <td onclick="makeEditable(this)">{{ forloop.counter0 }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.id_github }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.nom }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.nom_mumu }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.pays }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.langue }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.categorie }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.media }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.adulte }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.cryptee }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.forcer_diffusion }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.forcer_non_diffusion }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.diffusion }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.ip }}</td>
+                    <td onclick="makeEditable(this)">{{ chaine.occurrences|length }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<script src="{% static 'scripts/script.js' %}"></script>
+</body>
+</html>
