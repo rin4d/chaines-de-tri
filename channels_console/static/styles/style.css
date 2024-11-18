@@ -1,79 +1,112 @@
 /* Style global */
 body {
     margin: 0;
-    font-family: "Sarabun", sans-serif;
-    font-weight: 100;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     background-color: #12121217;
-    color: #333; 
+    color: #000000;
+    padding-top: 80px;
 }
 
+/* Style pour le header */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #f5f5f5;
+    z-index: 100;
+}
+
+/* Styles pour la navbar */
+.navbar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+    width: 100%; /* Soulignement permanent pour le lien actif */
+}
+/* Styles pour les boutons Modifier et OK en plus petit */
+button {
+    padding: 7px 10px;  /* Réduit la taille du bouton */
+    margin: 10px 643px;
+    font-size: 15px;  /* Réduit la taille du texte */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    min-width: 80px;  /* Largeur minimale pour un bouton compact */
+    width: auto;  /* Permet aux boutons de s'adapter à leur contenu */
+}
+
+#editButton {
+    background-color: #2e7a88;
+    color: white;
+}
+
+#saveButton {
+    background-color: #4CAF50;
+    color: white;
+    display: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Style principal */
 h1 {
     font-size: 25px;
     padding: 5px;
-    text-align: center; 
+    text-align: center;
+    margin-top: 20px;  /* Ajout d'un peu de marge au-dessus pour espacer du reste du contenu */
 }
 
-
-/* Style de la barre de navigation */
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #f5f5f5;
-    margin-bottom: 20px
-}
-
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-    padding-bottom: 3px;
-}
-
-
-header nav ul li a {
-    color: #333;
-    text-decoration: none;
-}
-
-header nav ul li a:hover {
-    color: #2e7a88;
-}
-
-/* Style du contenu principal */
 main {
     display: flex;
     flex-direction: column;
-    align-items: left; 
-    padding: 0 20px; 
+    align-items: left;
+    padding: 0 20px;
 }
 
 /* Style des sections */
 section {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     background-color: #fff;
     padding: 20px;
-    margin: 20px 0; 
-    max-width: 1300px; 
+    margin: 40px 0; /* Augmenter la marge en haut et en bas pour espacer plus du reste */
+    max-width: 1500px;
     width: 100%;
     box-shadow: 0 2px 4px rgba(122, 121, 121, 0.363);
-    border-radius: 15px; 
-    box-sizing: border-box; 
-}
-
-/* Style des sections */
-section {
-    display: flex;
-    flex-direction: column; 
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px 0; 
-    max-width: 1500px; 
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(122, 121, 121, 0.363);
-    border-radius: 15px; 
-    box-sizing: border-box; 
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
 /* Style du tableau */
@@ -84,12 +117,14 @@ table {
     font-size: 15px;
     text-align: left;
     background-color: #fff;
+    border: none;
 }
 
 th, td {
     padding: 12px;
-    border-bottom: 1px solid #ddd;
     text-align: center;
+    border: none; /* Supprime les bordures des cellules */
+    color: #000000;
 }
 
 thead {
@@ -97,24 +132,28 @@ thead {
 }
 
 tr:hover {
-    background-color: #2e7a8864; 
+    background-color: #2e7a8864;
 }
 
 th {
     background-color: #2e7a88;
     color: #fff;
     font-weight: 600;
-    border-bottom: 2px solid #ddd;
 }
 
 td {
-    border-bottom: 1px solid #eee;
+    background-color: transparent; /* S'assure qu'il n'y a pas de couleur résiduelle */
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5; /* Couleur pour les lignes paires */
 }
 
-.numero{
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Couleur pour les lignes impaires */
+}
+
+
+.numero {
     color: #2e7a88;
-} 
+}

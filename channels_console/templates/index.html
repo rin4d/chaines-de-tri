@@ -1,75 +1,96 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tri Chaînes</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<header>
-    <nav>
-        <ul class="navbar">
-            <li><a href="#"><b>Chaînes</b></a></li>
-            <li><a href="#"><b>Catégories</b></a></li>
-            <li><a href="#"><b>Pays</b></a></li>
-            <li><a href="#"><b>Langues</b></a></li>
-            <li><a href="#"><b>Occurences</b></a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="header">
+        <nav> 
+            <ul class="navbar">
+                <li><a href="#" class="active">Chaînes</a></li>
+                <li><a href="#">Catégories</a></li>
+                <li><a href="#">Pays</a></li>
+                <li><a href="#">Langues</a></li>
+                <li><a href="#">Occurences</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <h1>CHAÎNES : 824</h1>
-    <section>
-        <table>
-            <thead>
-            <tr>
-                <th>Numero</th>
-                <th>ID Github</th>
-                <th>Nom</th>
-                <th>Nom Mumu</th>
-                <th>Pays</th>
-                <th>Langues</th>
-                <th>Catégories</th>
-                <th>Media</th>
-                <th>Adulte</th>
-                <th>En clair / crypté</th>
-                <th>Forcer diffusion</th>
-                <th>Forcer non-diffusion</th>
-                <th>A diffuser</th>
-                <th>IP</th>
-                <th>Occurences</th>
-            </tr>
-            </thead>
+    <main>
 
-            <tbody>
-            {% for chaine in chaines %}
-                <tr>
-                    <td onclick="makeEditable(this)">{{ forloop.counter0 }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.id_github }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.nom }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.nom_mumu }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.pays }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.langue }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.categorie }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.media }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.adulte }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.cryptee }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.forcer_diffusion }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.forcer_non_diffusion }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.diffusion }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.ip }}</td>
-                    <td onclick="makeEditable(this)">{{ chaine.occurrences|length }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </section>
-</main>
+        <h1>CHAÎNES : 824</h1>
 
-<script src="{% static 'scripts/script.js' %}"></script>
+        <section>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Numero</th>
+                        <th>ID Github</th>
+                        <th>Nom</th>
+                        <th>Nom Mumu</th>
+                        <th>Pays</th>
+                        <th>Langues</th>
+                        <th>Catégories</th>
+                        <th>Media</th>
+                        <th>Adulte</th>
+                        <th>Forcer diffusion</th>
+                        <th>Forcer non-diffusion</th>
+                        <th>A diffuser</th>
+                        <th>IP</th>
+                        <th>Occurences</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="makeEditable(this)">1</td>
+                        <td onclick="makeEditable(this)">CanalPlus.fr</td>
+                        <td onclick="makeEditable(this)">Canal+</td>
+                        <td onclick="makeEditable(this)">CANAL+</td>
+                        <td class="pays" onclick="makeEditable(this)">FR</td>
+                        <td class="langues" onclick="makeEditable(this)">fra</td>
+                        <td class="categorie" onclick="makeEditable(this)">news</td>
+                        <td onclick="makeEditable(this)">tv</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td onclick="makeEditable(this)">239.1.17.27</td>
+                        <td onclick="makeEditable(this)">1</td>
+                    </tr>
+
+                    <tr>
+                        <td onclick="makeEditable(this)">1</td>
+                        <td onclick="makeEditable(this)">CanalPlus.fr</td>
+                        <td onclick="makeEditable(this)">Canal+</td>
+                        <td onclick="makeEditable(this)">CANAL+</td>
+                        <td class="pays" onclick="makeEditable(this)">FR</td>
+                        <td class="langues" onclick="makeEditable(this)">fra</td>
+                        <td class="categorie" onclick="makeEditable(this)">news</td>
+                        <td onclick="makeEditable(this)">tv</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td class="true-false" onclick="makeEditable(this)">false</td>
+                        <td onclick="makeEditable(this)">239.1.17.27</td>
+                        <td onclick="makeEditable(this)">1</td>
+                    </tr>
+
+                </tbody>
+                <button id="editButton">Modifier</button>
+                <button id="saveButton" style="display:none;">OK</button>
+                <table id="data-table">
+</table>
+
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
